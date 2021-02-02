@@ -25,3 +25,24 @@ while continue_playing:
       print(f"You have {player_cards} totalling {sum(player_cards)}")
     else:
       hitting = False
+  if sum(player_cards) <=21:
+    continue
+  else:
+    print('YOU LOSE')
+  while sum(computer_cards) < 21:
+    computer_cards.append(new_card())
+    print(computer_cards)
+  if sum(computer_cards) <= 21:
+    continue
+  else: 
+    print('Dealer busts, You win!')
+  if sum(computer_cards) < sum(player_cards):
+    print('You Win')
+  else:
+    print('Dealer wins, You lose')
+  ask_repeat = input('Do you want to play again? Y/N: ')
+  if ask_repeat == "Y" or ask_repeat == "y":
+    continue
+  else:
+    print("Thanks for playing!")
+    continue_playing = False

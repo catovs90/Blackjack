@@ -1,5 +1,6 @@
 import random
 from art import logo
+import replit
 print(logo)
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
@@ -66,6 +67,7 @@ while continue_playing:
   fortsette = input('Do you want to play again? Y/N: ')
   if fortsette == "y" or fortsette == "Y":
     continue_playing = True
+    replit.clear()
   else:
     print('Thank you for playing!')
     break
